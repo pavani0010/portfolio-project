@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Manager - JavaScript</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>Task Manager</h1>
+            <p>Manage your tasks easily</p>
+        </header>
+
+        <!-- Add Task Section -->
+        <section class="task-input">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a new task..."
+                autocomplete="off"
+            >
+
+            <button id="addTaskBtn">
+                Add Task
+            </button>
+
+        </section>
+
+        <!-- Filter Buttons -->
+        <section class="filters">
+
+            <button class="filter-btn active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter-btn" data-filter="active">
+                Active
+            </button>
+
+            <button class="filter-btn" data-filter="completed">
+                Completed
+            </button>
+
+        </section>
+
+        <!-- Task Information -->
+        <div class="task-info">
+
+            <span id="taskCount">
+                0 tasks
+            </span>
+
+            <button id="clearCompleted">
+                Clear Completed
+            </button>
+
+        </div>
+
+        <!-- Task List -->
+        <ul id="taskList"></ul>
+
+        <!-- Empty Message -->
+        <div id="emptyMessage" class="empty-message">
+            No tasks available.
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

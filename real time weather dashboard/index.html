@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Real-Time Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🌤️ Weather Dashboard</h1>
+            <p>Real-Time Weather Information</p>
+        </header>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name"
+                autocomplete="off"
+            >
+
+            <button id="searchBtn">
+                Search
+            </button>
+        </div>
+
+        <div id="message"></div>
+
+        <section id="weatherCard" class="weather-card hidden">
+
+            <div class="location">
+                <h2 id="cityName">City</h2>
+                <p id="countryName">Country</p>
+            </div>
+
+            <div class="weather-main">
+                <div class="weather-icon" id="weatherIcon">
+                    ☀️
+                </div>
+
+                <div>
+                    <div class="temperature">
+                        <span id="temperature">--</span>°C
+                    </div>
+
+                    <p id="weatherDescription">
+                        Weather condition
+                    </p>
+                </div>
+            </div>
+
+            <div class="weather-details">
+
+                <div class="weather-box">
+                    <span class="icon">💧</span>
+                    <h3>Humidity</h3>
+                    <p>
+                        <span id="humidity">--</span>%
+                    </p>
+                </div>
+
+                <div class="weather-box">
+                    <span class="icon">💨</span>
+                    <h3>Wind Speed</h3>
+                    <p>
+                        <span id="windSpeed">--</span> km/h
+                    </p>
+                </div>
+
+                <div class="weather-box">
+                    <span class="icon">🌡️</span>
+                    <h3>Temperature</h3>
+                    <p>
+                        <span id="temperature2">--</span>°C
+                    </p>
+                </div>
+
+                <div class="weather-box">
+                    <span class="icon">🕒</span>
+                    <h3>Updated</h3>
+                    <p id="updatedTime">
+                        --
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="instructions">
+            <h3>How it works</h3>
+
+            <ul>
+                <li>Enter a city name in the search box.</li>
+                <li>Click the Search button.</li>
+                <li>The application finds the city using a REST API.</li>
+                <li>Weather data is fetched asynchronously.</li>
+                <li>Temperature, humidity and wind speed are displayed.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Weather Dashboard | Asynchronous JavaScript & RESTful APIs</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
